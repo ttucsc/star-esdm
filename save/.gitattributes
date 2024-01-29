@@ -1,0 +1,51 @@
+# this file identifies binary files for GIT so it does not attempt to diff or merge them with previous versions
+#
+# The file types identified here are specific to Matlab.
+# You will likely have a global gitattributes file in $GIT_DIR/info/attributes that covers more generic files (image files, etc.)
+#
+#   Most of the patterns idenfitied here are described in Matlab's GIT section on protecting binary files:
+#       https://www.mathworks.com/help/matlab/matlab_prog/set-up-git-source-control.html#buhx2d6-1_3
+#
+#   See also GIT's page on .gitattribute files at https://git-scm.com/docs/gitattributes
+#
+#   With the exception of netcdf (*.nc) and CSV files, ARRM_V2 does not use, create, read or write any
+#   of the file types identified below.  No files of these types should be present in the ARRM_V2 GitHub repository.
+#   However, users may create these file types, and so they are listed in case users create and archive them in 
+#   their own private extensions of the ARRM_V2 Git repository.
+#
+#------------------
+#
+#   The following are specific to ARRM_V2 data, which can read and write netcdf and csv files
+#
+
+*.nc -crlf -diff -merge
+*.csv      -diff -merge
+
+#   The following file types are MATLAB-specific, and may be created by any additional code you write or use
+#   They are identified on MATLAB's GIT section.
+#
+#   ARRM_V2 does not create, read or write any of these file types.  
+
+*.mlx -crlf -diff -merge
+*.mat -crlf -diff -merge
+*.fig -crlf -diff -merge
+*.p   -crlf -diff -merge
+*.slx -crlf -diff -merge
+*.mdl -crlf -diff -merge
+
+#   The following are also recommended to be protected from merging in the matlab GIT section. 
+#
+#   ARRM_V2 does not create, read or write any files of these types.
+
+*.mdlp -crlf -diff -merge
+*.slxp -crlf -diff -merge
+*.sldd -crlf -diff -merge
+*.mexa64 -crlf -diff -merge
+*.mexw64 -crlf -diff -merge
+*.mexmaci64 -crlf -diff -merge
+*.xlsx -crlf -diff -merge
+*.docx -crlf -diff -merge
+*.pdf -crlf -diff -merge
+*.jpg -crlf -diff -merge
+*.png -crlf -diff -merge
+

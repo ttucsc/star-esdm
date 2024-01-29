@@ -1,0 +1,92 @@
+# .gitignore for ARRM_V2 master branch
+
+#   directories to ignore:
+
+**/anne/
+**/bin/
+**/csv/
+**/*ctrl/
+**/*data/
+**/MathWorks/
+**/mats/
+**/notes/
+**/old*/
+**/transportation/
+icsf/
+mkq/
+quanah/
+out/
+outfiles/
+hpcc_scripts/
+neys_scripts/
+nocona_scripts/
+quanah_scripts/
+xlquanah_scripts/
+cvd19/
+work
+
+# symbolic links we don't want tracked:
+anne
+canada_data
+data
+jcsf_data
+mini_data
+transportation
+
+
+
+#   for master branch, exclude prcp folder
+**/prcp/
+
+#   file types to ignore
+*~
+*.swp
+*.csv
+*.zip
+*.bak
+*.tar
+*.tar.z
+*.tar.gz
+*.nc
+*.RData
+*.log
+*.txt
+machinefile.*
+err.*
+*.o[0-9][0-9][0-9][0-9][0-9][0-9]*
+*.avi
+*.mp4
+*.mov
+*.jp2
+*.asv
+
+#   matlab files to ignore
+*.mat
+pathdef*.m
+pathdef_save.m
+#pathdefs.m
+
+#   images & figures to ignore
+*.fig
+*.pdf
+*.tif
+*.png
+*.jpg
+
+#   other files to ignore
+
+.DS_Store
+.Rproj.user
+out.*
+diary*
+Untitled*
+#
+#   ignore this file for ARRM_V2 archives
+#   they contain local settings for each user or system
+#   and will be tailored to the local system
+#   we don't want to overwrite those files or
+#   archive them
+ARRM_V2_run_params_localized.m
+test_start_workers*.sh
+outliers_algo.rtf
+
